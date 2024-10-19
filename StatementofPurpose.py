@@ -3,16 +3,16 @@ import google.generativeai as genai
 from streamlit_option_menu import option_menu
 
 st.set_page_config(
-    page_title="SmartScribe",
+    page_title="SmartCreate",
     page_icon="🧠",
-    initial_sidebar_state="expanded",
+    # initial_sidebar_state="expanded",
 )
 
 Google = 'AIzaSyDtl-9-hd5-JIXTnrYhf57_lQKsXm3Ksp0'
 genai.configure(api_key=Google)
 model = genai.GenerativeModel('gemini-1.5-pro')
 
-st.title(":orange[Smart]Scribe")
+st.title(":red[Smart]Create")
 st.sidebar.info("In cases when error appears while drafting document(s) hit the draft button once more.",icon="💡")
 
 
@@ -24,7 +24,7 @@ with st.sidebar:
 		menu_icon="chat-dots-fill",
 		default_index=0,
 		icons=["circle-fill","circle-half","circle"],
-		#orientation="horizontal"
+		orientation="horizontal"
 	)
 
 #temperature selection for Gemini
