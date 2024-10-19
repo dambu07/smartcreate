@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 
 
 st.set_page_config(
-    page_title="SmartScribe",
+    page_title="SmartCreate",
     page_icon="🧠",
     initial_sidebar_state="expanded",
 )
@@ -24,7 +24,7 @@ with st.sidebar:
 		menu_icon="chat-dots-fill",
 		default_index=0,
 		icons=["circle-fill","circle-half","circle"],
-		#orientation="horizontal"
+		# orientation="horizontal"
 	)
 
 #temperature selection conditions
@@ -50,7 +50,7 @@ with col4:
 st.subheader("Details of 1st Party")
 sec1, sec2, sec3 = st.columns(3)
 with sec1:
-	name = st.text_input("Enter 1st Party Name",placeholder="SmartScribe Inc.")
+	name = st.text_input("Enter 1st Party Name",placeholder="SmartCreate Inc.")
 with sec2:
 	rep = st.text_input("Enter Party representative name",placeholder="Aryaneel Shivam")
 with sec3:
@@ -100,7 +100,7 @@ partybclause = st.text_area("Enter your terms and clauses",placeholder="Write do
 generate = st.button("Draft Memorandum", type="primary", use_container_width=True)
 if generate:
 	try:
-		with st.spinner("SmartScribe is drafting your Memorandum of Understanding..."):
+		with st.spinner("SmartCreate is drafting your Memorandum of Understanding..."):
 
 			prompt = f"""
 							First Party Details are: {name},{rep},{pos},{address},{Contact},{email},{country},{date},{date2}

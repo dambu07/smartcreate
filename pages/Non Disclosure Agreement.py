@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 
 
 st.set_page_config(
-    page_title="SmartScribe",
+    page_title="SmartCreate",
     page_icon="🧠",
     initial_sidebar_state="expanded",
 )
@@ -49,7 +49,7 @@ st.subheader("Non Disclosure Agreement")
 #FIRST PARTY SECTION
 sec1, sec2, sec3 = st.columns(3)
 with sec1:
-    name = st.text_input("Enter 1st Party Name",placeholder="SmartScribe Inc.")
+    name = st.text_input("Enter 1st Party Name",placeholder="SmartCreate Inc.")
 with sec2:
     rep = st.text_input("Enter 1st Party representative name",placeholder="Aryaneel Shivam")
 with sec3:
@@ -107,7 +107,7 @@ with ss9:
 generate = st.button("Draft Non Disclosure Agreement", type="primary", use_container_width=True)
 if generate:
     try:
-        with st.spinner("SmartScribe is drafting your Non Disclosure Agreement..."):
+        with st.spinner("SmartCreate is drafting your Non Disclosure Agreement..."):
 
             prompt = f"""
                             First Party Details are: {name},{rep},{pos},{address},{Contact},{email},{country},{date},{date2}

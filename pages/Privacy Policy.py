@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 
 
 st.set_page_config(
-    page_title="SmartScribe",
+    page_title="SmartCreate",
     page_icon="🧠",
     initial_sidebar_state="expanded",
 )
@@ -50,7 +50,7 @@ with col4:
 st.subheader("Privacy Policy")
 sec1, sec2 = st.columns(2)
 with sec1:
-	cname = st.text_input("Enter Company Name",placeholder="SmartScribe")
+	cname = st.text_input("Enter Company Name",placeholder="SmartCreate")
 with sec2:
 	caddress = st.text_input("Enter Registered Address",placeholder="India, New Delhi, Sector-3")
 sec3, sec4 = st.columns(2)
@@ -79,12 +79,12 @@ with ss2:
 with ss3:
 	storage = st.selectbox("Data storage status",("On-site data storage","Cloud data storage"))
 userrights = st.multiselect("User Right(s) status",["Access and Correction","Data Portability","Deletion and Erasure","Opt-Out willingly"])
-desc = st.text_area("Describe your company in brief",placeholder="Eg: SmartScribe is an AI-powered LLM-based Legal and Academic Document drafting webapp.")
+desc = st.text_area("Describe your company in brief",placeholder="Eg: SmartCreate is an AI-powered LLM-based Legal and Academic Document drafting webapp.")
 
 generate = st.button("Draft My Privacy Policy",type="primary", use_container_width=True)
 if generate:
 	try:
-		with st.spinner("SmartScribe is drafting your Privacy Policy..."):
+		with st.spinner("SmartCreate is drafting your Privacy Policy..."):
 
 			prompt = f"""
 							Draft a fully formatted privacy policy with the given informations.

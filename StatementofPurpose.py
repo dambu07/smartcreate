@@ -3,7 +3,7 @@ import google.generativeai as genai
 from streamlit_option_menu import option_menu
 
 st.set_page_config(
-    page_title="SmartScribe",
+    page_title="SmartCreate",
     page_icon="🧠",
     initial_sidebar_state="expanded",
 )
@@ -24,12 +24,12 @@ with st.sidebar:
 		menu_icon="chat-dots-fill",
 		default_index=0,
 		icons=["circle-fill","circle-half","circle"],
-		#orientation="horizontal"
+		orientation="horizontal"
 	)
 
 #temperature selection for Gemini
 if selected=="Accurate":
-	temp = 0.0
+	temp = 0.2
 if selected=="Medium":
 	temp = 0.5
 if selected=="Creative":
@@ -73,7 +73,7 @@ with sec10:
 writestatement = st.button("Write My Statement", type="primary", use_container_width=True)
 if writestatement:
 	try:
-		with st.spinner("SmartScribe is drafting your statement of purpose..."):
+		with st.spinner("SmartCreate is drafting your statement of purpose..."):
 			prompt = f"Write a statement of purpose for {name} applying to {university} in the country {country} in {city}, academic background includes marks obtained in class 10 {marks10} and in class 12 {marks11} under {board}, wants to pursure {course} aiming to get a job in {job} applying for {option}."
 			response = model.generate_content(prompt, generation_config=genai.types.GenerationConfig(temperature=temp))
 			conv = st.write(response.text)
