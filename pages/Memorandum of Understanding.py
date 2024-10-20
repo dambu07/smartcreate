@@ -13,7 +13,7 @@ Google = 'AIzaSyDtl-9-hd5-JIXTnrYhf57_lQKsXm3Ksp0'
 genai.configure(api_key=Google)
 model = genai.GenerativeModel('gemini-1.5-pro')
 
-st.title(":orange[Smart]Scribe")
+st.title(":red[Smart]Create")
 st.sidebar.info("In cases when error appears while drafting document(s) hit the draft button once more.",icon="💡")
 
 #options menu
