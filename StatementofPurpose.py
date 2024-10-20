@@ -5,6 +5,7 @@ from streamlit_option_menu import option_menu
 st.set_page_config(
     page_title="SmartCreate",
     page_icon="🧠",
+	layout="wide",   # 'wide' layout or 'centered' layout
     # initial_sidebar_state="expanded",
 )
 
