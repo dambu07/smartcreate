@@ -16,6 +16,16 @@ model = genai.GenerativeModel('gemini-1.5-pro')
 st.title(":red[Smart]Create")
 st.sidebar.info("In cases when error appears while drafting document(s) hit the draft button once more.",icon="💡")
 
+###--- Hide Streamlit footer---###
+    hide_st_style = """
+        <style>
+    MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+       </style>
+    """
+    st.markdown(hide_st_style, unsafe_allow_html=True)
+#--------------------------------------------------------------------
 
 #options menu
 with st.sidebar:
